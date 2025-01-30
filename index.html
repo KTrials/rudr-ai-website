@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rudr-AI - IT Services Provider</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: #0073e6;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+	  position: relative; /* Required for blur effect */
+	}
+
+	header .logo {
+	  position: relative;
+	  z-index: 2; /* Ensure the logo is above the blur */
+	}
+
+	header .logo img {
+	  max-height: 70px; /* Increase the size of the logo */
+	  border-radius: 8px; /* Optional: Add rounded corners to the logo */
+	  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+	}
+
+    header nav a {
+      margin-left: 20px;
+      color: white;
+      font-weight: bold;
+    }
+    header nav a:hover {
+      color: #cce6ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* Sections */
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #0073e6;
+    }
+    section p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Services */
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .service-item {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 30%;
+      margin: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .service-item:hover {
+      transform: translateY(-10px);
+    }
+    .service-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Reviews */
+    .reviews {
+      background-color: #f4f4f4;
+      padding: 40px 20px;
+    }
+    .review-item {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 600px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .review-item blockquote {
+      font-style: italic;
+      margin: 0;
+    }
+    .review-item cite {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* Contact Form */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    form button {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    form button:hover {
+      background-color: #005bb5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0073e6;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="rlogo.jpg" alt="Rudr-AI Logo">
+    </div>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div>
+      <h1>Welcome to Rudr-AI</h1>
+      <p>Your Trusted Partner in Cyber Security, AI Research, and Secure Connectivity</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Rudr-AI is a leading IT service provider specializing in Cyber Security, AI Research, Security Research, and Internet/VPN services. Our mission is to deliver cutting-edge solutions to secure and empower businesses worldwide.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cyber Security">
+        <h3>Cyber Security</h3>
+        <p>We provide robust cybersecurity solutions to protect your business from threats.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://img.freepik.com/free-photo/engineers-brainstorming-ways-use-ai_482257-84889.jpg" alt="AI Research">
+        <h3>AI Research</h3>
+        <p>Innovative AI solutions tailored to your business needs.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://gradcoach.com/wp-content/uploads/research-topics-cybersecurity.png" alt="Security Research">
+        <h3>Security Research</h3>
+        <p>Advanced research to identify and mitigate vulnerabilities.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Internet and VPN">
+        <h3>Internet & VPN</h3>
+        <p>Reliable internet and secure VPN services for individuals and businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="reviews">
+    <h2>What Our Clients Say</h2>
+    <div class="review-item">
+      <blockquote>"Rudr-AI helped us secure our network against cyber threats. Highly recommended!"</blockquote>
+      <cite>- Niraj, CEO of S.A.N.N & CO</cite>
+    </div>
+    <div class="review-item">
+      <blockquote>"Their AI solutions designs transformed our business algorithms. Great team to work with!"</blockquote>
+      <cite>- Govind Raju, CTO of Innovate-AI</cite>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Your Name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Your Email">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Enquiry</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Rudr-AI. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
