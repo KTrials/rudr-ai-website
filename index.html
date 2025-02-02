@@ -114,6 +114,97 @@
       border-radius: 8px;
     }
 
+	/* Trainings Section Styling */
+	#trainings {
+	  padding: 50px 20px;
+	  text-align: center;
+	  background-color: #f9f9f9;
+	}
+
+	#trainings h2 {
+	  font-size: 2.5rem;
+	  margin-bottom: 30px;
+	  color: #333;
+	}
+
+	.training-container {
+	  display: flex;
+	  overflow-x: auto;
+	  gap: 20px;
+	  padding: 20px 0;
+	  scroll-behavior: smooth;
+	}
+
+	.training-banner {
+	  flex: 0 0 auto;
+	  width: 300px;
+	  border-radius: 10px;
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	  overflow: hidden;
+	  transition: transform 0.3s ease-in-out;
+	  background-color: #fff;
+	}
+
+	.training-banner:hover {
+	  transform: scale(1.05);
+	}
+
+	.training-banner img {
+	  width: 100%;
+	  height: 150px;
+	  object-fit: cover;
+	}
+
+	.training-content {
+	  padding: 15px;
+	}
+
+	.training-content h3 {
+	  font-size: 1.2rem;
+	  margin-bottom: 10px;
+	  color: #333;
+	}
+
+	.training-content p {
+	  font-size: 0.9rem;
+	  color: #666;
+	}
+
+	/* Scrollbar Styling */
+	.training-container::-webkit-scrollbar {
+	  height: 8px;
+	}
+
+	.training-container::-webkit-scrollbar-thumb {
+	  background: #ccc;
+	  border-radius: 10px;
+	}
+
+	.training-container::-webkit-scrollbar-track {
+	  background: #f1f1f1;
+	}
+
+	.scroll-buttons {
+	  display: flex;
+	  justify-content: center;
+	  gap: 10px;
+	  margin-top: 20px;
+	}
+
+	.scroll-buttons button {
+	  background: #007BFF;
+	  color: #fff;
+	  border: none;
+	  padding: 10px 20px;
+	  border-radius: 50px;
+	  cursor: pointer;
+	  transition: background 0.3s ease;
+	}
+
+	.scroll-buttons button:hover {
+	  background: #0056b3;
+	}
+
     /* Reviews */
     .reviews {
       background-color: #f4f4f4;
@@ -182,11 +273,12 @@
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="rlogo.jpg" alt="Rudr-AI Logo">
+      <img src="images/rlogo.jpg" alt="Rudr-AI Logo">
     </div>
     <nav>
       <a href="#about">About Us</a>
       <a href="#services">Services</a>
+      <a href="#trainings">Trainings</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -232,6 +324,74 @@
       </div>
     </div>
   </section>
+  
+ 
+  <!-- Trainings Section -->
+  <section id="trainings">
+    <h2>Our Top Trainings</h2>
+    <div class="training-container">
+		<div class="training-banner">
+		  <img src="images/malware-analysis.jpg" alt="Introduction to Malware Analysis">
+		  <div class="training-content">
+			<h3>Introduction to Malware Analysis</h3>
+			<p>Learn the fundamentals of analyzing malicious software and protecting systems.</p>
+		  </div>
+		</div>
+		<div class="training-banner">
+		  <img src="images/phishing-simulations.jpg" alt="Phishing Simulations">
+		  <div class="training-content">
+			<h3>Phishing Simulations</h3>
+			<p>Simulate phishing attacks to train employees on identifying and avoiding scams.</p>
+		  </div>
+		</div>
+		<div class="training-banner">
+		  <img src="images/security-gap-analysis.jpg" alt="Security Product Gap Analysis">
+		  <div class="training-content">
+			<h3>Security Product Gap Analysis (EDR, XDR, Detections)</h3>
+			<p>Evaluate your security tools and identify gaps in detection and response capabilities.</p>
+		  </div>
+		</div>
+		<div class="training-banner">
+		  <img src="images/cyber-awareness.jpg" alt="Corporate Cyber-Security Awareness">
+		  <div class="training-content">
+			<h3>Corporate Cyber-Security Awareness</h3>
+			<p>Empower your workforce with essential cybersecurity knowledge and best practices.</p>
+		  </div>
+		</div>
+		<div class="training-banner">
+		  <img src="images/ml-ai-intro.jpg" alt="Introduction to Machine Learning and AI">
+		  <div class="training-content">
+			<h3>Introduction to Machine Learning and AI</h3>
+			<p>Get started with machine learning and artificial intelligence concepts and applications.</p>
+		  </div>
+		</div>
+		<div class="training-banner">
+		  <img src="images/project-guidance.jpg" alt="Project Guidance and Training">
+		  <div class="training-content">
+			<h3>Project Guidance and Training (For College Students)</h3>
+			<p>Provide mentorship and hands-on training for college students working on technical projects.</p>
+		  </div>
+		</div>
+    </div>
+    <div class="scroll-buttons">
+      <button id="scroll-left">←</button>
+      <button id="scroll-right">→</button>
+    </div>
+  </section>
+
+
+  <!-- Add JavaScript at the bottom -->
+  <script>
+    // JavaScript for scrolling functionality
+    document.getElementById('scroll-left').addEventListener('click', () => {
+      document.querySelector('.training-container').scrollBy({ left: -320, behavior: 'smooth' });
+    });
+
+    document.getElementById('scroll-right').addEventListener('click', () => {
+      document.querySelector('.training-container').scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  </script>
+
 
   <!-- Reviews Section -->
   <section id="reviews" class="reviews">
@@ -249,7 +409,7 @@
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <form name="contact" netlify>
+    <form name="contact" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required placeholder="Your Name">
